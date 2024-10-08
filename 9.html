@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.html</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dokdo&family=Nanum+Pen+Script&display=swap');
+
+    body {
+        background: url('cat.jpg') left top no-repeat;
+        background-size: cover;
+    }
+
+    * {
+        margin: 10px;
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .Bagel {
+        font-family: "Bagel Fat One", system-ui;
+        font-size: 50px;
+    }
+
+
+    label {
+        margin: 10px;
+    }
+
+    #container {
+        margin: 20px;
+        font-size: 100px;
+        color: black;
+    }
+
+    .shadow {
+        color: blue;
+        text-shadow: 7px -7px 10px red;
+
+    }
+
+    div {
+        width: 200px;
+        height: 100px;
+        display: inline-block;
+        margin: 15px;
+        border-radius: 30px;
+    }
+
+    .box1 {
+        border-style: dotted;
+    }
+
+    .box2 {
+        box-shadow: 5px 5px 15px 5px blue;
+    }
+
+    #bg1 {
+        background-origin: padding-box;
+    }
+</style>
+
+<body>
+
+    <h1 class="Bagel">5단원</h1>
+    <p id="container">checkbox를 이용해 버튼을 선택하는 효과 (3개 전부 선택가능)</p>
+    <label><input type="checkbox" value="s_3">1번</label>
+    <label><input type="checkbox" value="s_3">2번</label>
+    <label><input type="checkbox" value="s_3">3번</label>
+    <p>radio를 이용해 버튼을 선택을 하나 가능</p>
+    <label><input type="radio" name="gift" value="yes">1번</label>
+    <label><input type="radio" name="gift" value="no">2번</label>
+    <p style="color: red" ;>파일 첨부 버튼을 추가</p>
+    <label><input type="file"> </label>
+
+    <h1 class="Bagel">6단원</h1>
+    <p>* 전체 선택자를 이용해서 margin : 10px color를 blue</p>
+    <p>inline스타일을 이용해서 파일 첨부 버튼추가만 빨강으로</p>
+    <p>id 선택자를 이용해서 요소의 특정 부분에만 스타일 변경</p>
+
+    <h1 class="Bagel">7단원</h1>
+    <p>구글 폰트를 이용해서 h1의 폰트를 바꾸기</p>
+    <p>text-decoration 속성에서 underline 을 이용해서 밑줄긋기 </p>
+    <p>text-shadow 속성을 이용해서 그림자 효과 주기</p>
+    <p class="shadow">shadow</p>
+
+    <h1 class="Bagel">8단원</h1>
+    <p>box 모델에 그림자 효과주기</p>
+    <div class="box2"> </div>
+    <p>border-style 속성을 이용해서 box의 선을 점선으로</p>
+    <div class="box1"></div>
+    <p>border-radius 속성을 이용해서 박스 모델의 테두리를 둥글게 처리 </p>
+
+    <h1 class="Bagel">9단원</h1>
+    <p>background-image 속성을 이용해서 고양이을 배경으로하기 </p>
+
+
+
+
+</body>
+
+</html>
