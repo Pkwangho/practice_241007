@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section {
+        width: 600px;
+
+    }
+
+    h1+p {
+        color: blue;
+    }
+
+    ul {
+        list-style: circle;
+    }
+
+    li {
+        padding: 5px 30px;
+    }
+
+    li a {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+    }
+
+    a[href *="na"] {
+        /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
+        background: blue;
+        color: white;
+    }
+
+    a[target="_blank"] {
+        color: brown;
+    }
+
+
+
+    .scaled-image {
+        width: 300px;
+        /* 기본 너비 */
+        transition: transform 1s ease;
+        /* 부드러운 애니메이션 효과 */
+    }
+
+    .scaled-image2 {
+        width: 300px;
+        transition: transform 1s ease;
+        /* 기본 너비 */
+    }
+
+    .scaled-image:hover {
+        transform: scale(1.5);
+        /* 마우스 오버 시 1.5배 확대 */
+    }
+
+    .scaled-image2:hover {
+        transform: translateX(50px);
+    }
+
+    .scaled-image2:hover {
+        transform: translateY(50px);
+    }
+
+    .image-container {
+        display: flex;
+        width:1500px;
+        background-color:#eee;
+        border:1px solid #222;
+        /* Flexbox 활성화 */
+        /* align-items: center; */
+        padding: 20px;
+        /* 여백 */
+        background-color: #f0f0f0;
+        /* 배경색 */
+    }
+
+    .image-container img {
+        width: 100px;
+        /* 각 이미지 너비 */
+        padding: 10px;
+        height: auto;
+        /* 비율 유지 */
+    }
+    #opt1{
+      flex-direction: row-reverse;          /* 왼쪽에서 오른쪽으로 */ 
+    }
+
+</style>
+
+<body>
+    <section>
+        <h1>10단원</h1>
+        <p>월요일</p>
+        <p>화요일</p>
+        <p>수요일</p>
+        <p>목요일</p>
+        <p>금요일</p>
+        <p>토요일</p>
+        <p>일요일</p>
+        <p style="color: purple;">인접 형제 선택자를 이용해서 같은 부모를 가진 형제 요소중 첫번째인 월요일에 파랑색으로 표시</p>
+    </section>
+    <ul>
+        <li><a href="https://www.naver.com/">네이버</a></li>
+        <li><a href="https://www.youtube.com/">유튜브</a></li>
+        <li><a href="hhttps://www.naver.com/" target="_blank">다음</a></li>
+    </ul>
+    <p style="color: purple;">속성 선택자를 이용해 속성값에 na가 들어가있는것만 파랑색표시</p>
+    <p style="color: purple;">속성 선택자를 이용해 지정한 속성을 가지고 있는것만 갈색으로 표시</p>
+    <h1>11단원</h1>
+    </div>
+    <img src="cat.jpg" class="scaled-image">
+    <p style="color: purple;">transform scale을 이용해 마우스 오버시 1.5배 확대</p>
+    <img src="cat.jpg" class="scaled-image2">
+    <img src="cat.jpg" class="scaled-image2">
+    <p style="color: purple;">transform translate를 이용해서 마우스 오버시 50px 이동</p>
+    <p style="color: purple;"> transition: transform 1s ease;를 이용해서 부드럽게 이동</p>
+</body>
+<h1>12단원</h1>
+<div class="image-container" id="opt1">
+    <img src="cat.jpg">
+    <img src="cat.jpg">
+    <img src="cat.jpg">
+</div>
+<p style = "color: purple;">고양이 사진을 flex-direction: row-reverse;를 이용해서 오른쪽에서 왼쪽으로 배치</p>
+
+
+</html>
