@@ -70,28 +70,68 @@
 
     .image-container {
         display: flex;
-        width:1500px;
-        background-color:#eee;
-        border:1px solid #222;
-        /* Flexbox 활성화 */
-        /* align-items: center; */
+        width: 1500px;
+        background-color: #eee;
+        border: 1px solid #222;
         padding: 20px;
-        /* 여백 */
         background-color: #f0f0f0;
-        /* 배경색 */
     }
 
     .image-container img {
         width: 100px;
-        /* 각 이미지 너비 */
         padding: 10px;
         height: auto;
-        /* 비율 유지 */
-    }
-    #opt1{
-      flex-direction: row-reverse;          /* 왼쪽에서 오른쪽으로 */ 
     }
 
+    #opt1 {
+        flex-direction: row-reverse;
+    }
+
+    body {
+        background: url(cat.jpg) no-repeat fixed;
+        background-size: cover;
+    }
+
+    @media screen and (max-width:1024px) {
+        body {
+            background: url(tiger.jpg) no-repeat fixed;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        body {
+            background: url(leopard.jpg) no-repeat fixed;
+            background-size: cover;
+        }
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .item1 {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .item2 {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    .item3 {
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+
+    .grid-container img {
+        width: 100px;
+        height: auto;
+    }
 </style>
 
 <body>
@@ -109,7 +149,7 @@
     <ul>
         <li><a href="https://www.naver.com/">네이버</a></li>
         <li><a href="https://www.youtube.com/">유튜브</a></li>
-        <li><a href="hhttps://www.naver.com/" target="_blank">다음</a></li>
+        <li><a href="hhttps://www.ver.com/" target="_blank">다음</a></li>
     </ul>
     <p style="color: purple;">속성 선택자를 이용해 속성값에 na가 들어가있는것만 파랑색표시</p>
     <p style="color: purple;">속성 선택자를 이용해 지정한 속성을 가지고 있는것만 갈색으로 표시</p>
@@ -128,7 +168,19 @@
     <img src="cat.jpg">
     <img src="cat.jpg">
 </div>
-<p style = "color: purple;">고양이 사진을 flex-direction: row-reverse;를 이용해서 오른쪽에서 왼쪽으로 배치</p>
+<p style="color: purple;">고양이 사진을 flex-direction: row-reverse;를 이용해서 오른쪽에서 왼쪽으로 배치</p>
+<p style="color: purple;">미디어 쿼리를 이용해서 창 화면의 크기에 따라 고양이 호랑이 표범 사진으로 </p>
 
+<div class="grid-container">
+    <img src="cat.jpg" alt="Image 1" class="item1">
+    <img src="tiger.jpg" alt="Image 2" class="item2">
+    <img src="leopard.jpg" alt="Image 3" class="item3">
+</div>
+<p style="color: purple;">그리드 라인을 사용하여 각 이미지를 그리드의 특정위치에 배치</p>
+<script>
+    alert("안녕하세요?");
+    var name = prompt("이름을 입력하세요.");
+    document.write("<b><big>" + name + "</big></b>님, 환영합니다.");
+</script>
 
 </html>
