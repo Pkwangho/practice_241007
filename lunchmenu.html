@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a:link,
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        width: 500px;
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        width: 120px;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #result {
+        width: 500px;
+        height: 800px;
+        margin: 30px auto;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        background-size: contain;
+        /* 변경 */
+        background-repeat: no-repeat;
+        /* 반복 방지 */
+        background-position: top;
+        position: relative;
+    }
+
+    #menuName {
+        position: absolute;
+        /* 위치를 절대적으로 설정 */
+        bottom: 60px;
+        /* 이름과 가격 간격 조정 */
+        left: 50%;
+        /* 중앙 정렬 */
+        transform: translateX(-50%);
+        /* 중앙 정렬을 위한 변환 */
+        background: rgba(255, 255, 255, 0.7);
+        /* 배경 반투명 */
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 24px;
+        text-align: center;
+        /* 글자 크기 조정 */
+    }
+
+    #menuPrice {
+        position: absolute;
+        bottom: 20px;
+        /* 가격 위치 */
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        /* 가격 글자 크기 조정 */
+        text-align: center;
+    }
+
+    p {
+        width: 80%;
+        padding: 10px;
+        line-height: 2em;
+    }
+</style>
+
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('tamago.jpeg','규카츠 타마고텐동 정식','16000원' )">메뉴1</a></li>
+        <li><a href="#" onclick="changeBg('pasta.jpg', '봉골레 파스타','7900원')">메뉴2</a></li>
+        <li><a href="#" onclick="changeBg('soup.jpg','돼지국밥','9000원')">메뉴3</a></li>
+    </ul>
+    <div id="result">
+        <div id="menuName"></div>
+        <div id="menuPrice"></div>
+    </div>
+
+
+
+    <script>
+        function changeBg(img, name, price) {
+            var result = document.querySelector('#result');
+            result.style.backgroundImage = `url('${img}')`;
+            menuName.textContent = name;
+            menuName.textContent = name; // 메뉴 이름 설정
+            menuPrice.textContent = price; // 가격 설정
+
+        }
+    </script>
+</body>
+
+</html>
